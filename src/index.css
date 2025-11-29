@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 214 46% 97%;
+    --foreground: 222 47% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 12%;
+
+    --primary: 209 100% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 199 86% 90%;
+    --secondary-foreground: 222 47% 12%;
+
+    --muted: 204 32% 92%;
+    --muted-foreground: 220 15% 35%;
+
+    --accent: 192 94% 43%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 5 75% 56%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 29% 85%;
+    --input: 210 29% 85%;
+    --ring: 209 100% 50%;
+
+    --radius: 0.9rem;
+
+    /* Portfolio specific tokens */
+    --gradient-primary: linear-gradient(120deg, hsl(209 100% 50%) 0%, hsl(192 94% 43%) 100%);
+    --gradient-dark: linear-gradient(180deg, hsl(222 47% 7%) 0%, hsl(222 47% 12%) 100%);
+    --shadow-glow: 0 25px 80px hsl(209 100% 50% / 0.23);
+    --shadow-card: 0 30px 60px hsl(222 47% 12% / 0.12);
+    --transition-smooth: all 0.25s cubic-bezier(0.45, 0, 0.15, 1);
+  }
+
+  .dark {
+    --background: 222 47% 7%;
+    --foreground: 210 40% 98%;
+
+    --card: 222 47% 12%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222 47% 12%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 209 100% 64%;
+    --primary-foreground: 222 47% 9%;
+
+    --secondary: 217 33% 18%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217 28% 22%;
+    --muted-foreground: 210 20% 80%;
+
+    --accent: 192 94% 58%;
+    --accent-foreground: 222 47% 9%;
+
+    --destructive: 4 63% 50%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217 23% 28%;
+    --input: 217 23% 28%;
+    --ring: 209 100% 64%;
+
+    /* Dark mode specific */
+    --shadow-glow: 0 35px 95px hsl(209 100% 64% / 0.3);
+    --shadow-card: 0 30px 60px hsl(0 0% 0% / 0.55);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    font-family: "Space Grotesk", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    line-height: 1.65;
+    background-image:
+      radial-gradient(circle at 12% 20%, hsl(199 86% 90% / 0.65), transparent 55%),
+      radial-gradient(circle at 82% 0%, hsl(209 100% 50% / 0.18), transparent 45%),
+      linear-gradient(180deg, hsl(var(--background)) 0%, hsl(var(--background)) 100%);
+    background-attachment: fixed;
+    min-height: 100vh;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold tracking-tight;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-card/50 backdrop-blur-lg border border-border/50;
+  }
+
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent;
+  }
+
+  .glow {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .soft-grid {
+    background-image:
+      linear-gradient(90deg, hsl(var(--border) / 0.35) 1px, transparent 1px),
+      linear-gradient(180deg, hsl(var(--border) / 0.35) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+}
