@@ -118,9 +118,9 @@ const ExperienceCard = ({ experience, index }: { experience: ExperienceItem; ind
           className="overflow-hidden space-y-2"
         >
           {experience.highlights.map((highlight, i) => (
-            <li key={i} className="text-muted-foreground flex gap-2">
-              <span className="text-primary mt-1.5">•</span>
-              <span>{highlight}</span>
+            <li key={i} className="text-muted-foreground flex items-start gap-3">
+              <span className="text-primary leading-6">•</span>
+              <span className="leading-relaxed">{highlight}</span>
             </li>
           ))}
         </motion.ul>

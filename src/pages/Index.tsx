@@ -20,7 +20,7 @@ const Index = () => {
       <Contact />
       
       <footer className="py-8 text-center text-muted-foreground border-t border-border">
-        <p>© 2025 Ahmad Soboh. Built with React, Tailwind & Framer Motion.</p>
+        <p>© 2025 Ahmad Soboh</p>
       </footer>
     </div>
   );
