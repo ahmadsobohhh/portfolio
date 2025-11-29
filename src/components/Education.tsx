@@ -21,7 +21,8 @@ const coursework = [
 const activities = [
   "5× Hackathon Finisher (uOttaHack, Hack the Hill, more)",
   "uOttaHack — Executive (2 years)",
-  "uOttawa Rocketry Club — Member (1 year)"
+  "uOttawa Rocketry Club — Member (1 year)",
+  ""
 ];
 
 export const Education = () => {
@@ -29,7 +30,7 @@ export const Education = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="education" className="py-20 md:py-32" ref={ref}>
+    <section id="education" className="py-16 md:py-24" ref={ref}>
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 50 }}

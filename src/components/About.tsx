@@ -2,10 +2,7 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
 const focusAreas = [
-  "Fullstack + platform",
-  "Backend systems",
-  "Embedded & hardware",
-  "Data + observability"
+
 ];
 
 const internshipHighlights = [
@@ -19,7 +16,7 @@ export const About = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="about" className="py-20 md:py-32" ref={ref}>
+    <section id="about" className="py-16 md:py-24" ref={ref}>
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -56,8 +53,7 @@ export const About = () => {
                   Across multiple internships at <span className="text-foreground font-semibold">Ciena</span>,
                   <span className="text-foreground font-semibold"> Ford Motors</span>, and
                   <span className="text-foreground font-semibold"> MASV</span>, I've contributed to everything from
-                  hardware-in-the-loop validation to high-traffic backend services—bridging low-level systems knowledge
-                  with user-focused software.
+                  ASIC validation to software systems.
                 </p>
                 <p>
                   Coursework and hands-on experience built a strong foundation in
@@ -65,6 +61,9 @@ export const About = () => {
                   <span className="text-foreground font-semibold"> system design</span>, and
                   <span className="text-foreground font-semibold"> modern web development</span>. I aim for clean, maintainable
                   code and solutions that are easy to debug, scale, and improve.
+                </p>
+                <p>
+                  You’re welcome to explore my portfolio, projects, and education below. If you’d like to connect or have any questions, feel free to reach out!
                 </p>
 
                 <div className="flex flex-wrap gap-3 pt-4">

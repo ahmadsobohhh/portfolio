@@ -4,17 +4,15 @@ import { Button } from "@/components/ui/button";
 import portraitPlaceholder from "@/assets/ahmadsoboh.jpg";
 
 const heroHighlights = [
-  "Software Eng @ uOttawa",
-  "ASIC Design/Verification",
-  "Data / backend / cloud",
-  "Embedded systems + UX"
+  "Full-Stack & Backend",
+  "Networking & Systems",
+  "DevOps & CI/CD",
+  "Hardware Verification"
 ];
 
 const heroStats = [
   { label: "uOttawa year", value: "4th" },
-  { label: "Internships completed", value: "5" },
-  { label: "Teams partnered", value: "6" },
-  { label: "Prototypes/week", value: "2" }
+  { label: "Internships completed", value: "5" }
 ];
 
 export const Hero = () => {
@@ -44,7 +42,7 @@ export const Hero = () => {
               className="text-5xl md:text-6xl lg:text-7xl font-semibold leading-tight"
             >
               <span className="gradient-text">Ahmad Soboh</span>
-              <span className="block text-foreground/80">Student engineer building software systems.</span>
+              <span className="block text-foreground/80">Software Engineer</span>
             </motion.h1>
 
             <motion.p
@@ -53,8 +51,11 @@ export const Hero = () => {
               transition={{ duration: 0.7, delay: 0.2 }}
               className="text-lg md:text-xl text-muted-foreground max-w-2xl"
             >
-I am a dedicated software engineer eager to continue developing my skills. From projects to coursework, I genuinely enjoy problem solving and learning new concepts. I take pride in building practical, well-designed solutions and constantly pushing myself to grow. I’m excited about the wide range of opportunities in software and look forward to the vast opportunities it will present in the future.            </motion.p>
-
+              I’m a software engineer focused on sharpening my skills and building meaningful, well-designed systems.
+              I enjoy solving problems, learning new concepts, and turning ideas into practical solutions. Whether through projects
+              or coursework, I push myself to improve with every challenge. I’m excited about the path ahead and the opportunities
+              to keep growing in the software world!
+            </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -77,9 +78,11 @@ I am a dedicated software engineer eager to continue developing my skills. From 
               transition={{ duration: 0.7, delay: 0.35 }}
               className="flex flex-col gap-4 sm:flex-row"
             >
-              <Button size="lg" className="gap-2">
-                <Download className="h-4 w-4" />
-                View Resume
+              <Button size="lg" className="gap-2" asChild>
+                <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+                  <Download className="h-4 w-4" />
+                  View Resume
+                </a>
               </Button>
               <Button size="lg" variant="outline" className="gap-2">
                 <Mail className="h-4 w-4" />
@@ -134,9 +137,15 @@ I am a dedicated software engineer eager to continue developing my skills. From 
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.5 }}
       >
-        <motion.div animate={{ y: [0, 8, 0] }} transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}>
-          <ArrowDown className="h-6 w-6 text-muted-foreground" />
-        </motion.div>
+        <a
+          href="#about"
+          aria-label="Scroll to about section"
+          className="inline-flex rounded-full border border-border/60 bg-background/80 p-3 hover:border-primary/60 transition"
+        >
+          <motion.div animate={{ y: [0, 8, 0] }} transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}>
+            <ArrowDown className="h-6 w-6 text-muted-foreground" />
+          </motion.div>
+        </a>
       </motion.div>
     </section>
   );

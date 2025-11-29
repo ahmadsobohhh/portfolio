@@ -241,7 +241,7 @@ export const Projects = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="projects" className="py-20 md:py-32" ref={ref}>
+    <section id="projects" className="py-16 md:py-24" ref={ref}>
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -275,31 +275,6 @@ export const Projects = () => {
             ))}
           </div>
 
-          <div className="mt-16 rounded-2xl border border-border/60 bg-background/80 p-6 shadow-[var(--shadow-card)]">
-            <h3 className="text-xl font-semibold mb-4 text-center">Summary Comparison</h3>
-            <div className="overflow-x-auto">
-              <table className="w-full text-sm text-left border-collapse">
-                <thead>
-                  <tr className="text-muted-foreground uppercase text-xs tracking-wide">
-                    <th className="py-3 px-2">Project</th>
-                    <th className="py-3 px-2">Domain</th>
-                    <th className="py-3 px-2">Primary Languages</th>
-                    <th className="py-3 px-2">Key Technologies</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {projectSummary.map((row) => (
-                    <tr key={row.name} className="border-t border-border/40">
-                      <td className="py-3 px-2 font-medium text-foreground">{row.name}</td>
-                      <td className="py-3 px-2 text-muted-foreground">{row.domain}</td>
-                      <td className="py-3 px-2 text-muted-foreground">{row.languages}</td>
-                      <td className="py-3 px-2 text-muted-foreground">{row.tech}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </div>
         </motion.div>
       </div>
     </section>
