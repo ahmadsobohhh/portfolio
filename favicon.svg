@@ -1,0 +1,11 @@
+<svg width="128" height="128" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title">
+  <title>Ahmad Soboh monogram</title>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1f8ef1" />
+      <stop offset="100%" stop-color="#00b1d2" />
+    </linearGradient>
+  </defs>
+  <rect width="120" height="120" x="4" y="4" rx="28" fill="url(#bg)" />
+  <path d="M36 84L50 44h12l-14 40zm22 0L72 44h12l-6 17h12l-4 11h-12l-6 12z" fill="#ffffff" />
+</svg>
