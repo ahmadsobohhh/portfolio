@@ -84,9 +84,11 @@ export const Hero = () => {
                   View Resume
                 </a>
               </Button>
-              <Button size="lg" variant="outline" className="gap-2">
-                <Mail className="h-4 w-4" />
-                Contact Me
+              <Button size="lg" variant="outline" className="gap-2" asChild>
+                <a href="#contact">
+                  <Mail className="h-4 w-4" />
+                  Contact Me
+                </a>
               </Button>
             </motion.div>
 
