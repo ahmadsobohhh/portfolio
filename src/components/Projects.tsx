@@ -20,70 +20,6 @@ interface ProjectCategory {
 
 const projectCategories: ProjectCategory[] = [
   {
-    title: "Data Engineering, Backend & Cloud Systems",
-    description:
-      "High-throughput data processing pipelines, cloud deployments, and distributed backend systems built for reliability.",
-    projects: [
-      {
-        title: "DataSync",
-        description: "Lightweight ETL scheduler for side projects",
-        tech: ["Python", "SQLite", "Airflow", "Docker"],
-        highlights: [
-          "Nightly jobs pull API data, normalize it, and drop it into a single SQLite file for dashboards.",
-          "Small Airflow deployment with Docker Compose keeps everything easy to spin up on a home lab.",
-        ],
-      },
-    ],
-  },
-  {
-    title: "Robotics, AI & High-Performance Computing",
-    description: "Low-level control, simulation, and GPU-accelerated planning for autonomous systems.",
-    projects: [
-      {
-        title: "AutoDriveSim",
-        description: "Autonomous Vehicle Simulation Framework",
-        tech: ["C++", "ROS2", "OpenCV", "Gazebo", "Python"],
-        highlights: [
-          "Real-time simulator for lane detection and route planning in dynamic traffic scenes.",
-          "ROS2 nodes for localization/control with Gazebo visualizations of every scenario.",
-        ],
-      },
-      {
-        title: "RoverOne",
-        description: "Arduino-powered autonomous robot car",
-        tech: ["Arduino", "C/C++", "ESP32", "Ultrasonic", "Motor Control"],
-        highlights: [
-          "Designed a sensor fusion stack (ultrasonic + encoders) to follow routes and avoid obstacles.",
-          "Built custom PCB for motor drivers and exposed telemetry over ESP32 so tweaks happen in real time.",
-        ],
-      },
-    ],
-  },
-  {
-    title: "Game Development & Graphics",
-    description: "Rendering engines, multiplayer gameplay systems, and tooling for creative teams.",
-    projects: [
-      {
-        title: "Spectra Engine",
-        description: "3D Game Engine",
-        tech: ["C++", "OpenGL", "ImGui", "Assimp", "GLM"],
-        highlights: [
-          "Lightweight engine supporting real-time rendering, scene management, and asset import.",
-          "Implemented modular ECS architecture plus an in-engine editor via ImGui.",
-        ],
-      },
-      {
-        title: "EchoForge",
-        description: "Multiplayer Sandbox Prototype",
-        tech: ["C++", "Unreal Engine", "Blueprints"],
-        highlights: [
-          "Third-person sandbox with custom gameplay mechanics and design tools.",
-          "Server-client architecture synchronizes player state across networked sessions.",
-        ],
-      },
-    ],
-  },
-  {
     title: "Mobile & Web Applications",
     description: "User-facing experiences spanning iOS, React Native, and cross-platform desktop apps.",
     projects: [
@@ -118,13 +54,57 @@ const projectCategories: ProjectCategory[] = [
       },
     ],
   },
+  {
+    title: "Data Engineering, Backend & Cloud Systems",
+    description:
+      "High-throughput data processing pipelines, cloud deployments, and distributed backend systems built for reliability.",
+    projects: [
+      {
+        title: "DataSync",
+        description: "Lightweight ETL scheduler for side projects",
+        tech: ["Python", "SQLite", "Airflow", "Docker"],
+        highlights: [
+          "Nightly jobs pull API data, normalize it, and drop it into a single SQLite file for dashboards.",
+          "Small Airflow deployment with Docker Compose keeps everything easy to spin up on a home lab.",
+        ],
+      },
+    ],
+  },
+  {
+    title: "Robotics, AI & High-Performance Computing",
+    description: "Low-level control, simulation, and GPU-accelerated planning for autonomous systems.",
+    projects: [
+      {
+        title: "RoverOne",
+        description: "Arduino-powered autonomous robot car",
+        tech: ["Arduino", "C/C++", "ESP32", "Ultrasonic", "Motor Control"],
+        highlights: [
+          "Designed a sensor fusion stack (ultrasonic + encoders) to follow routes and avoid obstacles.",
+          "Built custom PCB for motor drivers and exposed telemetry over ESP32 so tweaks happen in real time.",
+        ],
+      },
+    ],
+  },
+  {
+    title: "Game Development & Graphics",
+    description: "Rendering engines, multiplayer gameplay systems, and tooling for creative teams.",
+    projects: [
+      {
+        title: "EchoForge",
+        description: "Multiplayer Sandbox Prototype",
+        tech: ["C++", "Unreal Engine", "Blueprints"],
+        highlights: [
+          "Third-person sandbox with custom gameplay mechanics and design tools.",
+          "Server-client architecture synchronizes player state across networked sessions.",
+        ],
+      },
+    ],
+  },
 ];
 
 const projectSummary = [
   { name: "DataSync", domain: "Data Engineering", languages: "Python", tech: "Airflow, SQLite" },
-  { name: "AutoDriveSim", domain: "Robotics / Sim", languages: "C++, Python", tech: "ROS2, Gazebo, OpenCV" },
   { name: "RoverOne", domain: "Robotics", languages: "C/C++", tech: "Arduino, ESP32" },
-  { name: "Spectra Engine", domain: "Game Dev", languages: "C++", tech: "OpenGL, ImGui" },
   { name: "EchoForge", domain: "Game Dev", languages: "C++", tech: "Unreal Engine" },
   { name: "Kalim", domain: "Mobile AI", languages: "JS/TS, Python", tech: "React Native, OpenAI" },
   { name: "PlayVer", domain: "Community", languages: "TypeScript", tech: "Next.js, Supabase" },
