@@ -12,17 +12,19 @@ const coursework = [
   "Computer Architecture",
   "Operating Systems",
   "Software Requirements & Specifications",
-  "Software Testing & QA",
+  "Software Testing & Quality Assurance",
   "Embedded Systems",
   "Web Applications",
-  "Probability & Statistics for Engineers"
+  "Probability & Statistics for Engineers",
+  "Linear Algebra & Calculus I + II"
 ];
 
 const activities = [
   "5× Hackathon Finisher (uOttaHack, Hack the Hill, more)",
   "uOttaHack — Executive (2 years)",
   "uOttawa Rocketry Club — Member (1 year)",
-  ""
+  "PlayVer Inc. — Dev Lead (2 months)",
+  "Bullfinch Inc. — Market Research Lead (2 months)",
 ];
 
 export const Education = () => {
@@ -30,7 +32,7 @@ export const Education = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="education" className="py-16 md:py-24" ref={ref}>
+    <section id="education" className="py-12 md:py-20" ref={ref}>
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -38,7 +40,7 @@ export const Education = () => {
           transition={{ duration: 0.8 }}
           className="max-w-5xl mx-auto"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center">
+          <h2 className="text-4xl md:text-5xl font-bold mb-10 text-center">
             <span className="gradient-text">Education</span>
           </h2>
 
@@ -60,11 +62,11 @@ export const Education = () => {
                     <Award className="w-5 h-5 text-primary" />
                     GPA 3.92 / 4.00
                   </span>
-                  <span className="flex items-center gap-2 rounded-lg bg-muted px-4 py-2 text-sm font-medium text-muted-foreground">
+                  <span className="flex items-center gap-2 rounded-lg bg-muted px-4 py-2 text-sm font-semibold text-foreground">
                     <MapPin className="w-4 h-4 text-primary" />
                     Ottawa, ON
                   </span>
-                  <span className="flex items-center gap-2 rounded-lg bg-muted px-4 py-2 text-sm font-medium text-muted-foreground">
+                  <span className="flex items-center gap-2 rounded-lg bg-muted px-4 py-2 text-sm font-semibold text-foreground">
                     <Calendar className="w-4 h-4 text-primary" />
                     Graduating Apr ’27
                   </span>

@@ -8,6 +8,8 @@ interface Project {
   description: string;
   tech: string[];
   highlights: string[];
+  github?: string;
+  demo?: string;
 }
 
 interface ProjectCategory {
@@ -23,48 +25,12 @@ const projectCategories: ProjectCategory[] = [
       "High-throughput data processing pipelines, cloud deployments, and distributed backend systems built for reliability.",
     projects: [
       {
-        title: "NetWatch",
-        description: "Distributed Network Monitoring System",
-        tech: ["Python", "FastAPI", "Linux", "ICMP/TCP", "Docker", "Grafana"],
+        title: "DataSync",
+        description: "Lightweight ETL scheduler for side projects",
+        tech: ["Python", "SQLite", "Airflow", "Docker"],
         highlights: [
-          "Distributed ICMP/TCP health checks across 200+ nodes for proactive alerting.",
-          "FastAPI control plane orchestrates registration, scheduling, and notifications with Grafana dashboards.",
-        ],
-      },
-      {
-        title: "StreamHive",
-        description: "Real-Time Data Processing System",
-        tech: ["Python", "Apache Kafka", "Spark", "AWS"],
-        highlights: [
-          "Distributed pipeline processing live IoT sensor data with Kafka streams feeding Spark analytics.",
-          "Reduced end-to-end latency by 35% and deployed autoscaling workers on AWS EC2 + S3.",
-        ],
-      },
-      {
-        title: "KineticQueue",
-        description: "Real-Time Event Processing System",
-        tech: ["Python", "Kafka", "Redis", "FastAPI", "Docker"],
-        highlights: [
-          "Event-streaming pipeline handling billions of weekly user activity events.",
-          "Redis caching + Dockerized services with Prometheus monitoring keep fan-out latency low.",
-        ],
-      },
-      {
-        title: "MailFlow",
-        description: "Scalable Email Analytics Platform",
-        tech: ["Python", "Django", "React", "PostgreSQL", "AWS"],
-        highlights: [
-          "Full-stack app delivering real-time dashboards over 1M+ marketing email logs.",
-          "Optimized AWS infra and async processing to improve response times by 50%.",
-        ],
-      },
-      {
-        title: "QueryCraft",
-        description: "Cloud-Native SQL Query Optimizer",
-        tech: ["Java", "PostgreSQL", "Docker", "REST"],
-        highlights: [
-          "Custom SQL parser + optimizer reorders joins/filters to shrink execution time.",
-          "Modular OOP architecture packaged in Docker with REST APIs for integration.",
+          "Nightly jobs pull API data, normalize it, and drop it into a single SQLite file for dashboards.",
+          "Small Airflow deployment with Docker Compose keeps everything easy to spin up on a home lab.",
         ],
       },
     ],
@@ -83,21 +49,12 @@ const projectCategories: ProjectCategory[] = [
         ],
       },
       {
-        title: "DriveOpt",
-        description: "GPU-Accelerated Path Planning Optimizer",
-        tech: ["C++", "CUDA", "TensorRT", "PyTorch"],
+        title: "RoverOne",
+        description: "Arduino-powered autonomous robot car",
+        tech: ["Arduino", "C/C++", "ESP32", "Ultrasonic", "Motor Control"],
         highlights: [
-          "Optimized high-performance kernels for A* and Dijkstra to hit real-time deadlines.",
-          "Integrated deep RL policies exported through TensorRT for low-latency NVIDIA deployment.",
-        ],
-      },
-      {
-        title: "SecureLink",
-        description: "Encrypted IoT Communication Framework",
-        tech: ["C/C++", "Embedded Linux", "MQTT", "TLS", "OpenSSL", "SQLite"],
-        highlights: [
-          "Lightweight secure messaging protocol with certificate rotation for fleets of devices.",
-          "Embedded Linux client handles OTA firmware updates and telemetry persistence.",
+          "Designed a sensor fusion stack (ultrasonic + encoders) to follow routes and avoid obstacles.",
+          "Built custom PCB for motor drivers and exposed telemetry over ESP32 so tweaks happen in real time.",
         ],
       },
     ],
@@ -131,24 +88,6 @@ const projectCategories: ProjectCategory[] = [
     description: "User-facing experiences spanning iOS, React Native, and cross-platform desktop apps.",
     projects: [
       {
-        title: "Pulse",
-        description: "Health & Activity Tracker",
-        tech: ["Swift", "SwiftUI", "CoreData", "HealthKit"],
-        highlights: [
-          "Visualizes steps and heart-rate data with HealthKit integrations and widgets.",
-          "Cut load times 45% through CoreData caching and background sync.",
-        ],
-      },
-      {
-        title: "Voyage",
-        description: "Travel Itinerary Planner",
-        tech: ["Swift", "SwiftUI", "Firebase", "MapKit"],
-        highlights: [
-          "Collaborative planning app with real-time cloud sync and shared boards.",
-          "Dynamic route maps + activity suggestions powered by MapKit overlays.",
-        ],
-      },
-      {
         title: "Kalim",
         description: "Dialectal Arabic Speaking App",
         tech: ["Expo", "React Native", "OpenAI API", "Python"],
@@ -158,31 +97,38 @@ const projectCategories: ProjectCategory[] = [
         ],
       },
       {
-        title: "Encrypted P2P File Sharing",
-        description: "Decentralized desktop application",
-        tech: ["Electron", "React", "libP2P"],
+        title: "PlayVer",
+        description: "Sports meetup platform for youth",
+        tech: ["Next.js", "TypeScript", "Tailwind", "Supabase"],
         highlights: [
-          "Peer-to-peer discovery plus transfer pipeline secured with end-to-end encryption.",
-          "Resilient session management keeps file swaps alive across flaky networks.",
+          "Built pro bono to help local teens organize weekly basketball, soccer, and volleyball sessions.",
+          "Implemented RSVP tracking, gear checklists, and SMS reminders so pickup games actually happen.",
         ],
+        github: "https://github.com/Playver/playver",
+      },
+      {
+        title: "Encrypted",
+        description: "End-to-end encrypted chatrooms for web",
+        tech: ["HTML", "CSS", "JavaScript", "Node.js", "Express"],
+        highlights: [
+          "Users spin up private rooms to exchange 256-bit encrypted messages, photos, and files with digital signatures to block MITM attacks.",
+          "Locked-down controllers + backend plus strict validation/sanitization keep the attack surface minimal while the UI stays clean.",
+        ],
+        github: "https://github.com/ahmadsobohhh/Encrypted",
       },
     ],
   },
 ];
 
 const projectSummary = [
-  { name: "StreamHive", domain: "Data Engineering", languages: "Python", tech: "Kafka, Spark, AWS" },
-  { name: "KineticQueue", domain: "Data Engineering", languages: "Python", tech: "Kafka, Redis, Docker" },
-  { name: "MailFlow", domain: "Full Stack / Data", languages: "Python, JS", tech: "Django, React, AWS" },
-  { name: "QueryCraft", domain: "Backend / DB", languages: "Java", tech: "PostgreSQL, Docker" },
+  { name: "DataSync", domain: "Data Engineering", languages: "Python", tech: "Airflow, SQLite" },
   { name: "AutoDriveSim", domain: "Robotics / Sim", languages: "C++, Python", tech: "ROS2, Gazebo, OpenCV" },
-  { name: "DriveOpt", domain: "HPC / AI", languages: "C++", tech: "CUDA, TensorRT, PyTorch" },
+  { name: "RoverOne", domain: "Robotics", languages: "C/C++", tech: "Arduino, ESP32" },
   { name: "Spectra Engine", domain: "Game Dev", languages: "C++", tech: "OpenGL, ImGui" },
   { name: "EchoForge", domain: "Game Dev", languages: "C++", tech: "Unreal Engine" },
-  { name: "Pulse", domain: "iOS Dev", languages: "Swift", tech: "SwiftUI, HealthKit" },
-  { name: "Voyage", domain: "iOS Dev", languages: "Swift", tech: "SwiftUI, Firebase" },
   { name: "Kalim", domain: "Mobile AI", languages: "JS/TS, Python", tech: "React Native, OpenAI" },
-  { name: "Encrypted P2P", domain: "Desktop / Network", languages: "JS/TS", tech: "Electron, libP2P" },
+  { name: "PlayVer", domain: "Community", languages: "TypeScript", tech: "Next.js, Supabase" },
+  { name: "Encrypted", domain: "Security / Web", languages: "JavaScript", tech: "Node.js, Express" },
 ];
 
 const ProjectCard = ({ project, index }: { project: Project; index: number }) => {
@@ -202,12 +148,30 @@ const ProjectCard = ({ project, index }: { project: Project; index: number }) =>
           {project.title}
         </h3>
         <div className="flex gap-2">
-          <Button size="icon" variant="ghost" className="opacity-0 group-hover:opacity-100 transition-opacity">
-            <Github className="w-5 h-5" />
-          </Button>
-          <Button size="icon" variant="ghost" className="opacity-0 group-hover:opacity-100 transition-opacity">
-            <ExternalLink className="w-5 h-5" />
-          </Button>
+          {project.github && (
+            <Button
+              asChild
+              size="icon"
+              variant="ghost"
+              className="opacity-0 group-hover:opacity-100 transition-opacity"
+            >
+              <a href={project.github} target="_blank" rel="noreferrer">
+                <Github className="w-5 h-5" />
+              </a>
+            </Button>
+          )}
+          {project.demo && (
+            <Button
+              asChild
+              size="icon"
+              variant="ghost"
+              className="opacity-0 group-hover:opacity-100 transition-opacity"
+            >
+              <a href={project.demo} target="_blank" rel="noreferrer">
+                <ExternalLink className="w-5 h-5" />
+              </a>
+            </Button>
+          )}
         </div>
       </div>
 

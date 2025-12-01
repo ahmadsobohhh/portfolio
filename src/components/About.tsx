@@ -29,8 +29,7 @@ export const About = () => {
               About <span className="gradient-text">Me</span>
             </h2>
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
-              Fourth-year Software Engineering student at the University of Ottawa focused on internships that blend
-              systems thinking, developer experience, and user-ready polish.
+              Fourth-year Software Engineering student at the University of Ottawa
             </p>
           </div>
 
@@ -45,7 +44,7 @@ export const About = () => {
 
               <div className="relative space-y-6 text-lg md:text-xl text-muted-foreground leading-relaxed">
                 <p>
-                  I'm a <span className="text-foreground font-semibold">software engineering student + intern</span> who has
+                  I'm a <span className="text-foreground font-semibold">software engineering student</span> who has
                   built full-stack applications, backend systems, and internal tools that help teams work more efficiently
                   and reliably.
                 </p>
@@ -56,10 +55,10 @@ export const About = () => {
                   ASIC validation to software systems.
                 </p>
                 <p>
-                  Coursework and hands-on experience built a strong foundation in
-                  <span className="text-foreground font-semibold"> algorithms</span>,
+                  Through coursework and hands-on experience, I have built a strong foundation in 
+                  <span className="text-foreground font-semibold"> data structures & algorithms</span>,
                   <span className="text-foreground font-semibold"> system design</span>, and
-                  <span className="text-foreground font-semibold"> modern web development</span>. I aim for clean, maintainable
+                  <span className="text-foreground font-semibold"> fullstack development</span>. I aim for clean, maintainable
                   code and solutions that are easy to debug, scale, and improve.
                 </p>
                 <p>

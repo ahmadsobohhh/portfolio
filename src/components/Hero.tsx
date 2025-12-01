@@ -51,7 +51,7 @@ export const Hero = () => {
               transition={{ duration: 0.7, delay: 0.2 }}
               className="text-lg md:text-xl text-muted-foreground max-w-2xl"
             >
-              I’m a software engineer focused on sharpening my skills and building meaningful, well-designed systems.
+              Hey! I’m a software engineer focused on sharpening my skills and building meaningful, well-designed systems.
               I enjoy solving problems, learning new concepts, and turning ideas into practical solutions. Whether through projects
               or coursework, I push myself to improve with every challenge. I’m excited about the path ahead and the opportunities
               to keep growing in the software world!
