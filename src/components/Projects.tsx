@@ -60,52 +60,22 @@ const projectCategories: ProjectCategory[] = [
       "High-throughput data processing pipelines, cloud deployments, and distributed backend systems built for reliability.",
     projects: [
       {
-        title: "DataSync",
-        description: "Lightweight ETL scheduler for side projects",
-        tech: ["Python", "SQLite", "Airflow", "Docker"],
+        title: "CryptoPulse",
+        description: "Serverless crypto price alerts",
+        tech: ["AWS Lambda", "API Gateway", "DynamoDB", "SNS", "TypeScript"],
         highlights: [
-          "Nightly jobs pull API data, normalize it, and drop it into a single SQLite file for dashboards.",
-          "Small Airflow deployment with Docker Compose keeps everything easy to spin up on a home lab.",
+          "Users submit targets through a minimal API and DynamoDB stores alert state with no servers to babysit.",
+          "Scheduled Lambda checks exchange prices and fires SNS SMS notifications the moment a threshold hits.",
         ],
+        github: "https://github.com/ahmadsobohhh/CryptoPriceAlerting",
       },
     ],
   },
-  {
-    title: "Robotics, AI & High-Performance Computing",
-    description: "Low-level control, simulation, and GPU-accelerated planning for autonomous systems.",
-    projects: [
-      {
-        title: "RoverOne",
-        description: "Arduino-powered autonomous robot car",
-        tech: ["Arduino", "C/C++", "ESP32", "Ultrasonic", "Motor Control"],
-        highlights: [
-          "Designed a sensor fusion stack (ultrasonic + encoders) to follow routes and avoid obstacles.",
-          "Built custom PCB for motor drivers and exposed telemetry over ESP32 so tweaks happen in real time.",
-        ],
-      },
-    ],
-  },
-  {
-    title: "Game Development & Graphics",
-    description: "Rendering engines, multiplayer gameplay systems, and tooling for creative teams.",
-    projects: [
-      {
-        title: "EchoForge",
-        description: "Multiplayer Sandbox Prototype",
-        tech: ["C++", "Unreal Engine", "Blueprints"],
-        highlights: [
-          "Third-person sandbox with custom gameplay mechanics and design tools.",
-          "Server-client architecture synchronizes player state across networked sessions.",
-        ],
-      },
-    ],
-  },
+  // Robotics and Game categories temporarily removed
 ];
 
 const projectSummary = [
-  { name: "DataSync", domain: "Data Engineering", languages: "Python", tech: "Airflow, SQLite" },
-  { name: "RoverOne", domain: "Robotics", languages: "C/C++", tech: "Arduino, ESP32" },
-  { name: "EchoForge", domain: "Game Dev", languages: "C++", tech: "Unreal Engine" },
+  { name: "CryptoPulse", domain: "Serverless", languages: "TypeScript", tech: "Lambda, DynamoDB, SNS" },
   { name: "Kalim", domain: "Mobile AI", languages: "JS/TS, Python", tech: "React Native, OpenAI" },
   { name: "PlayVer", domain: "Community", languages: "TypeScript", tech: "Next.js, Supabase" },
   { name: "Encrypted", domain: "Security / Web", languages: "JavaScript", tech: "Node.js, Express" },
