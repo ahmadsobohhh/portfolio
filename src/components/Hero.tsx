@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowDown, Download, Mail } from "lucide-react";
+import { ArrowDown, Download, Github, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import portraitPlaceholder from "@/assets/ahmadsoboh.jpg";
 
@@ -82,6 +82,17 @@ export const Hero = () => {
                 <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
                   <Download className="h-4 w-4" />
                   View Resume
+                </a>
+              </Button>
+              <Button
+                size="lg"
+                variant="secondary"
+                className="gap-2 border border-primary/40 bg-background text-primary hover:bg-primary/10"
+                asChild
+              >
+                <a href="https://github.com/ahmadsobohhh" target="_blank" rel="noopener noreferrer">
+                  <Github className="h-4 w-4" />
+                  GitHub
                 </a>
               </Button>
               <Button size="lg" variant="outline" className="gap-2" asChild>
