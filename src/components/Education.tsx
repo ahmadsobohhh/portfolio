@@ -20,11 +20,15 @@ const coursework = [
 ];
 
 const activities = [
-  "5× Hackathon Finisher (uOttaHack, Hack the Hill, more)",
+  "5× Hackathon Finisher (uOttaHack, Hack the Hill)",
   "uOttaHack — Executive (2 years)",
   "uOttawa Rocketry Club — Member (1 year)",
   "PlayVer Inc. — Dev Lead (2 months)",
   "Bullfinch Inc. — Market Research Lead (2 months)",
+  "Radar Media — Product Lead (2 months)",
+  "Aperio Development — Product Lead (2 months)",
+  "Jenik Services Inc. — Product Lead (2 months)",
+  "Nexgen Accounting Inc. — Tech Lead (2 months)",
 ];
 
 export const Education = () => {
@@ -68,7 +72,7 @@ export const Education = () => {
                   </span>
                   <span className="flex items-center gap-2 rounded-lg bg-muted px-4 py-2 text-sm font-semibold text-foreground">
                     <Calendar className="w-4 h-4 text-primary" />
-                    Graduating Apr ’27
+                    Graduating April 2027
                   </span>
                 </div>
               </div>
