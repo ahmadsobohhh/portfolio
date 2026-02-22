@@ -52,6 +52,17 @@ const projectCategories: ProjectCategory[] = [
         ],
         github: "https://github.com/ahmadsobohhh/Encrypted",
       },
+      {
+        title: "LettuceEat",
+        description: "Group meal planning and restaurant discovery",
+        tech: ["React", "TypeScript", "Node.js", "Express", "Yellowcake API", "Gemini API"],
+        highlights: [
+          "Browse restaurants, menus, and reviews, then create events to pick the best time for everyone.",
+          "Built an end-to-end system that turns indecisive group chats into confirmed meal plans.",
+          "Won 1st place at uOttaHack for solving a real student planning problem.",
+        ],
+        github: "https://github.com/arohao/LettuceEat",
+      },
     ],
   },
   {
@@ -79,6 +90,7 @@ const projectSummary = [
   { name: "Kalim", domain: "Mobile AI", languages: "JS/TS, Python", tech: "React Native, OpenAI" },
   { name: "PlayVer", domain: "Community", languages: "TypeScript", tech: "Next.js, Supabase" },
   { name: "Encrypted", domain: "Security / Web", languages: "JavaScript", tech: "Node.js, Express" },
+  { name: "LettuceEat", domain: "Food & Social", languages: "TypeScript", tech: "React, Node.js, APIs" },
 ];
 
 const ProjectCard = ({ project, index }: { project: Project; index: number }) => {
