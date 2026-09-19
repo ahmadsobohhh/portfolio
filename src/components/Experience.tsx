@@ -1,9 +1,3 @@
-import { motion } from "framer-motion";
-import { useInView } from "framer-motion";
-import { useRef, useState } from "react";
-import { ChevronDown, ChevronUp } from "lucide-react";
-import { Button } from "@/components/ui/button";
-
 interface ExperienceItem {
   company: string;
   role: string;
@@ -12,6 +6,12 @@ interface ExperienceItem {
 }
 
 const experiences: ExperienceItem[] = [
+  {
+    company: "Nokia",
+    role: "Software Engineer Intern",
+    period: "Sept 2026 – Dec 2026",
+    highlights: [],
+  },
   {
     company: "Ciena Corporation",
     role: "Software Engineer Intern",
@@ -62,96 +62,40 @@ const experiences: ExperienceItem[] = [
   },
 ];
 
-const ExperienceCard = ({ experience, index }: { experience: ExperienceItem; index: number }) => {
-  const [isExpanded, setIsExpanded] = useState(index === 0);
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-50px" });
-
+export const Experience = () => {
   return (
-    <motion.div
-      ref={ref}
-      initial={{ opacity: 0, x: -50 }}
-      animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
-      transition={{ duration: 0.5, delay: index * 0.1 }}
-      className="relative pl-8 pb-12 last:pb-0"
-    >
-      {/* Timeline dot */}
-      <div className="absolute left-0 top-0 w-4 h-4 rounded-full bg-primary glow" />
-      
-      {/* Timeline line */}
-      {index < experiences.length - 1 && (
-        <div className="absolute left-[7px] top-4 bottom-0 w-0.5 bg-border" />
-      )}
+    <section id="experience" className="site-shell py-20 md:py-28">
+      <div className="rule mb-12" />
+      <div className="grid gap-10 md:grid-cols-[180px_1fr] md:gap-16">
+        <p className="text-xs uppercase tracking-[0.22em] text-muted-foreground">Experience</p>
 
-      <div className="glass rounded-xl p-6 hover:shadow-lg transition-all duration-300">
-        <div className="flex justify-between items-start mb-4 gap-4">
-          <div>
-            <h3 className="text-xl md:text-2xl font-bold text-foreground">{experience.company}</h3>
-            <p className="text-primary font-semibold mt-1">{experience.role}</p>
-          </div>
-          <span className="text-sm text-muted-foreground whitespace-nowrap">{experience.period}</span>
-        </div>
+        <ul className="space-y-0">
+          {experiences.map((exp, index) => (
+            <li key={`${exp.company}-${exp.period}`} className="rule py-8 first:border-t-0 first:pt-0">
+              <div className="flex flex-col gap-2 sm:flex-row sm:items-baseline sm:justify-between sm:gap-8">
+                <div>
+                  <h3 className="text-2xl font-bold tracking-tight md:text-3xl">{exp.company}</h3>
+                  <p className="mt-1 text-muted-foreground">{exp.role}</p>
+                </div>
+                <p className="shrink-0 text-sm text-muted-foreground tabular-nums">{exp.period}</p>
+              </div>
 
-        <Button
-          variant="ghost"
-          size="sm"
-          onClick={() => setIsExpanded(!isExpanded)}
-          className="mb-2 gap-2"
-        >
-          {isExpanded ? (
-            <>
-              <ChevronUp className="w-4 h-4" />
-              Show Less
-            </>
-          ) : (
-            <>
-              <ChevronDown className="w-4 h-4" />
-              Show Details
-            </>
-          )}
-        </Button>
+              {exp.highlights.length > 0 && (
+                <ul className="mt-5 max-w-2xl space-y-2 text-[0.95rem] leading-relaxed text-foreground/70">
+                  {exp.highlights.map((item) => (
+                    <li key={item} className="pl-0">
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              )}
 
-        <motion.ul
-          initial={false}
-          animate={{ height: isExpanded ? "auto" : 0 }}
-          transition={{ duration: 0.3 }}
-          className="overflow-hidden space-y-2"
-        >
-          {experience.highlights.map((highlight, i) => (
-            <li key={i} className="text-muted-foreground flex items-start gap-3">
-              <span className="text-primary leading-6">•</span>
-              <span className="leading-relaxed">{highlight}</span>
+              {index === 0 && exp.highlights.length === 0 && (
+                <p className="mt-4 text-sm text-muted-foreground">Current role</p>
+              )}
             </li>
           ))}
-        </motion.ul>
-      </div>
-    </motion.div>
-  );
-};
-
-export const Experience = () => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
-
-  return (
-    <section id="experience" className="py-16 md:py-24" ref={ref}>
-      <div className="container mx-auto px-4">
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-          transition={{ duration: 0.8 }}
-          className="max-w-4xl mx-auto"
-        >
-          <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center">
-            <span className="gradient-text">Experience</span>
-          </h2>
-
-          <div className="space-y-0">
-            {experiences.map((exp, index) => (
-              <ExperienceCard key={index} experience={exp} index={index} />
-            ))}
-          </div>
-        </motion.div>
+        </ul>
       </div>
     </section>
   );
