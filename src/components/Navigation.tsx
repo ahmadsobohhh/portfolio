@@ -11,20 +11,32 @@ export const Navigation = () => {
 
   return (
     <nav
-      className={`fixed inset-x-0 top-0 z-40 transition-colors duration-300 ${
-        scrolled ? "bg-background/90 backdrop-blur-sm" : "bg-transparent"
+      className={`fixed inset-x-0 top-0 z-40 border-b transition-colors duration-300 ${
+        scrolled ? "border-border bg-background/85 backdrop-blur-md" : "border-transparent bg-transparent"
       }`}
     >
       <div className="site-shell flex h-16 items-center justify-between">
         <a href="#" className="font-display text-sm font-bold tracking-tight no-underline">
           AS
         </a>
-        <div className="flex items-center gap-6 md:gap-8">
+        <div className="flex items-center gap-5 md:gap-8">
+          <a
+            href="#experience"
+            className="nav-link hidden sm:inline-block"
+          >
+            Experience
+          </a>
+          <a
+            href="#projects"
+            className="nav-link hidden sm:inline-block"
+          >
+            Projects
+          </a>
           <a
             href="/resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-xs uppercase tracking-[0.18em] text-muted-foreground no-underline transition-colors hover:text-foreground"
+            className="nav-link"
           >
             Resume
           </a>
@@ -32,7 +44,7 @@ export const Navigation = () => {
             href="https://github.com/ahmadsobohhh"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-xs uppercase tracking-[0.18em] text-muted-foreground no-underline transition-colors hover:text-foreground"
+            className="nav-link"
           >
             GitHub
           </a>

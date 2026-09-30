@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 180" role="img" aria-labelledby="title">
+  <title id="title">Encrypted</title>
+  <rect x="52" y="78" width="88" height="68" rx="14" fill="none" stroke="#818cf8" stroke-width="6"/>
+  <path d="M70 78V62a26 26 0 0152 0v16" fill="none" stroke="#818cf8" stroke-width="6"/>
+  <circle cx="96" cy="108" r="7" fill="#c7d2fe"/>
+  <text x="170" y="108" fill="#f8fafc" font-family="Arial, sans-serif" font-size="46" font-weight="700">Encrypted</text>
+</svg>
