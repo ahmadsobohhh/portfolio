@@ -33,7 +33,7 @@ export const experiences: ExperienceItem[] = [
   },
   {
     company: "Ciena Corporation",
-    role: "Design and Verification Hardware Intern",
+    role: "ASIC Design and Verification Hardware Intern",
     period: "Jan 2025 – Aug 2025",
     logo: "/logos/ciena.png",
     website: "https://www.ciena.com/",
