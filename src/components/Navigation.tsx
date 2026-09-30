@@ -33,7 +33,7 @@ export const Navigation = () => {
             Projects
           </a>
           <a
-            href="/resume.pdf"
+            href="/resume.pdf?v=20260929-2"
             target="_blank"
             rel="noopener noreferrer"
             className="nav-link"
